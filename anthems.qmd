@@ -22,21 +22,19 @@ library(devtools)
 
 ## Introduction
 
-## Loading dataset
+## Loading data-set
 
-The dataset is derived from this [Github repository](https://github.com/lucas-de-sa/national-anthems-clustering). It contains the national anthems for
+The data-set is derived from this [Github repository](https://github.com/lucas-de-sa/national-anthems-clustering). It contains the national anthems for 190 countries.
 
 The variables of the data set are
 
-| Variable/ Column names | Explaination                                            |
-|------------------------|---------------------------------------------------------|
-| country                | name of country                                         |
-| alpha_2                | countries alpha 2 ISO-code                              |
-| alpha_3                | countries alpha 3 ISO-code                              |
-| continent              | continent where country is located (Note: 6 continents) |
-| anthem                 |                                                         |
-
-: Dataset codebook
+| Variables/ Column names | Description                                             |
+|----------------------|--------------------------------------------------|
+| country                 | name of country                                         |
+| alpha_2                 | countries alpha 2 ISO-code                              |
+| alpha_3                 | countries alpha 3 ISO-code                              |
+| continent               | continent where country is located (Note: 6 continents) |
+| anthem                  | lyrics of national anthem                               |
 
 ```{r}
 
