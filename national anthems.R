@@ -19,7 +19,7 @@ anthem_sentiment <- tidy_anthem %>%
   pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
   mutate(sentiment = positive - negative)
 
-
+saveRDS(anthem_sentiment, "anthem_sentiments")
 
 
 
