@@ -15,9 +15,10 @@ tidy_anthem <- tidy_anthem %>%
 
 anthem_sentiment <- tidy_anthem %>%
   inner_join(get_sentiments("bing"), by="word") %>%
-  count(document, sentiment) %>%
+  count(Country, sentiment) %>%
   pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
   mutate(sentiment = positive - negative)
+
 
 
 
