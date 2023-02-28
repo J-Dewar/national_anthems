@@ -20,7 +20,7 @@ anthem_sentiment <- tidy_anthem %>%
   pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
   mutate(sentiment = positive - negative)
 
-saveRDS(anthem_sentiment, "anthem_sentiments")
+saveRDS(anthem_sentiment, "anthem_sentiments.rds")
 
 
 anthem_sentiment_continent <- tidy_anthem %>%
@@ -29,7 +29,7 @@ anthem_sentiment_continent <- tidy_anthem %>%
   pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
   mutate(sentiment = positive - negative)
 
-saveRDS(anthem_sentiment_continent, "anthem_sentiments continent")
+saveRDS(anthem_sentiment_continent, "anthem_sentiments continent.rds")
 
 
 p2 <- ggplot(anthem_sentiment_continent, aes(Continent, sentiment, fill = Continent)) +
