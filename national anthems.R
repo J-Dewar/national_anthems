@@ -42,5 +42,17 @@ nrc_anthem_sentiment_continent <- tidy_anthem %>%
   count(Continent, sentiment) %>%
   pivot_wider(names_from = sentiment, values_from = n, values_fill = 0)
 
+df2 <- data.frame(t(nrc_anthem_sentiment_continent[-1]))
+colnames(df2) <- continent_names
+
+continent_names <- c("Africa","Asia","Europe", "North America","Oceania",
+                     "South America")
 
 
+
+p3 <- ggplot(anthem_sentiment_continent, aes(, fill = Continent)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~continent_names, ncol = 2, scales = "free_x")
+
+ggplot(data=df2, aes(x=dose, y=len, fill=supp)) +
+  geom_bar(stat="identity", position=position_dodge())
